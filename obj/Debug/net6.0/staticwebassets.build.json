@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NU9o3pfWrpVWD2RGQgOHdBXX/FebcVFE5ZW2bDzLqsU=",
+  "Source": "net6_demo",
+  "BasePath": "_content/net6_demo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
