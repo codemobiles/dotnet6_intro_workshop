@@ -1,3 +1,5 @@
+github: https://github.com/codemobiles/dotnet6_intro_workshop.git
+
 install dotcore sdk : https://dotnet.microsoft.com/en-us/download
 install vscode
 - enable shell cmd for vscode on macos
@@ -32,3 +34,7 @@ Enter DotnetCore (after enter you may have to clear and repeat start debugging s
 mac: sudo dotnet dev-certs https --trust
 windows: dotnet dev-certs https --trust
 - after enable self-sign ssl you can run https 
+
+
+# Swagger
+c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo{Title = "CodeMobiles .NET 6 Demo", Version="v2"});
