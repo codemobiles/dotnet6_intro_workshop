@@ -37,6 +37,25 @@ public class ProductController : ControllerBase
   public ActionResult QueryProductById([FromQuery] int id, [FromQuery] string category, string user)
   {
       return Ok(new {productId = id, name = "VueJs", cat = category, user = user});
+  }  
+
+  [HttpPost]
+  public ActionResult<Product> AddProduct([FromForm] Product product) // FromBody and FromForm
+  {
+      return Ok(product);
+  }
+
+  
+  [HttpPost("add")]
+  public ActionResult<Product> AddProductV2([FromForm] Product product) // FromBody and FromForm
+  {
+      return Ok(product);
+  }
+
+  public class Product {
+      public int id { get; set; }
+      public string name { get; set; }
+      public int price { get; set; }
   }
   
 }
