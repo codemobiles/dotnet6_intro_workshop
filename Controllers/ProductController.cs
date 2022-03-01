@@ -52,6 +52,32 @@ public class ProductController : ControllerBase
       return Ok(product);
   }
 
+  [HttpPut("{id}")]  // ../product/1111
+  public ActionResult UpdateProductById(int id, [FromBody] Product product)
+  {
+      
+      if (id != product.id){
+          return BadRequest();
+      }
+
+      if (id != 1111){
+          return NotFound();
+      }
+
+      return Ok(product);
+  }
+
+  [HttpDelete("{id}")]
+  public ActionResult DeleteById(int id)
+  {
+      if (id != 1111){
+          return NotFound();
+      }
+
+      return NoContent();
+  }
+  
+
   public class Product {
       public int id { get; set; }
       public string name { get; set; }
