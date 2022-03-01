@@ -38,3 +38,22 @@ windows: dotnet dev-certs https --trust
 
 # Swagger
 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo{Title = "CodeMobiles .NET 6 Demo", Version="v2"});
+
+HttpGet
+-------------
+- HttpGet
+- ActionResult and without
+- Ok()
+- Extension ASP Essential api-
+
+- HttpGet("{id}") parameter
+
+
+    [HttpGet("{id}")]
+    public ActionResult GetProductById(int id) => Ok(new { productId = id, name = "iMac" });
+
+    [HttpGet("search")]
+    public ActionResult SearchProduct([FromQuery] string name) => Ok(new { productId = 111, name = name });    
+    
+
+

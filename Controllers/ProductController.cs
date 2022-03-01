@@ -6,29 +6,37 @@ namespace net6_demo.Controllers;
 [Route("[controller]")]
 public class ProductController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+  [HttpGet]
+  public ActionResult<List<string>> GetProducts(){
+      var products = new List<string>();
+      products.Add("VueJS");
+      products.Add("Flutter");
+      products.Add("React");      
+      return Ok(products);
+  }
 
-    private readonly ILogger<ProductController> _logger;
+  [HttpGet("{id}")] // .../12
+  public ActionResult GetProductById(int id)
+  {
+      return Ok(new {productId = id, name = "VueJs"});
+  }
 
-    public ProductController(ILogger<ProductController> logger)
-    {
-        _logger = logger;
-    }
+  [HttpGet("search/{id}/{category}")] // .../12
+  public ActionResult SearchProductById(int id, string category)
+  {
+      return Ok(new {productId = id, name = "VueJs", cat = category});
+  }
 
-    [HttpGet("dummy1")]
-    public IEnumerable<string> Get1()
-    {
-        return Enumerable.Range(1, 5).Select(index => $"index: {index}")
-        .ToArray();
-    }
+  [HttpGet("query/product")] // .../query/product?id=12&cat=web
+  public ActionResult QueryProductById([FromQuery] int id, [FromQuery] string category)
+  {
+      return Ok(new {productId = id, name = "VueJs", cat = category});
+  }
 
-    [HttpGet("dummy2")]
-    public IEnumerable<string> Get2()
-    {
-        return Enumerable.Range(1, 10).Select(index => $"index: {index}")
-        .ToArray();
-    }
+  [HttpGet("queryv2/product/{user}")] // .../query/product?id=12&cat=web
+  public ActionResult QueryProductById([FromQuery] int id, [FromQuery] string category, string user)
+  {
+      return Ok(new {productId = id, name = "VueJs", cat = category, user = user});
+  }
+  
 }
