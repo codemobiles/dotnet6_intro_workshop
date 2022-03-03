@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "NU9o3pfWrpVWD2RGQgOHdBXX/FebcVFE5ZW2bDzLqsU=",
+  "Hash": "iQ2ogIqRLX37ORVz8buTqY1fVyxgxRQhoAbiw0DsMis=",
   "Source": "net6_demo",
   "BasePath": "_content/net6_demo",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "net6_demo/wwwroot",
+      "Source": "net6_demo",
+      "ContentRoot": "/Users/chaiyasittayabovorn/Desktop/net6_demo/wwwroot/",
+      "BasePath": "_content/net6_demo",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/chaiyasittayabovorn/Desktop/net6_demo/wwwroot/images/restful.jpg",
+      "SourceId": "net6_demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/chaiyasittayabovorn/Desktop/net6_demo/wwwroot/",
+      "BasePath": "_content/net6_demo",
+      "RelativePath": "images/restful.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/restful.jpg"
+    }
+  ]
 }

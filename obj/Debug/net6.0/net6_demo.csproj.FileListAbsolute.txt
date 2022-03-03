@@ -25,3 +25,4 @@
 /Users/chaiyasittayabovorn/Desktop/net6_demo/obj/Debug/net6.0/net6_demo.pdb
 /Users/chaiyasittayabovorn/Desktop/net6_demo/obj/Debug/net6.0/net6_demo.genruntimeconfig.cache
 /Users/chaiyasittayabovorn/Desktop/net6_demo/obj/Debug/net6.0/ref/net6_demo.dll
+/Users/chaiyasittayabovorn/Desktop/net6_demo/bin/Debug/net6.0/net6_demo.staticwebassets.runtime.json
